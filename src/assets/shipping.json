@@ -1,0 +1,14 @@
+[
+  {
+    "tipologia": "Consegna in 1 giorno",
+    "prezzo": 25.99
+  },
+  {
+    "tipologia": "Consegna in 2 giorni",
+    "prezzo": 9.99
+  },
+  {
+    "tipologia": "Posta ordinaria",
+    "prezzo": 2.99
+  }
+]

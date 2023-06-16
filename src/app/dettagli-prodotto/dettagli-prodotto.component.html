@@ -1,0 +1,24 @@
+<h2>Dettagli Prodotto</h2>
+
+<div *ngIf="cellulare">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{ cellulare.modello }}</mat-card-title>
+      <mat-card-subtitle>Apple</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="cellulare.img" alt="cellulare" />
+    <mat-card-content>
+      <p>
+        {{ cellulare.informazioni }}
+      </p>
+      <p>
+        Prezzo: {{ cellulare.prezzo | currency : "€" }}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="aggiungiAlCarrello(cellulare)">Acquista</button>
+      <button mat-button [routerLink]="['']">Torna al magazzino</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

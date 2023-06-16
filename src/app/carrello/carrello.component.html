@@ -1,0 +1,43 @@
+<h2>Carrello</h2>
+
+<table matSort *ngIf="articoli.length > 0">
+  <tr>
+    <th mat-sort-header="name">Prodotto</th>
+    <th mat-sort-header="price">Prezzo</th>
+  </tr>
+  <br />
+  <tr *ngFor="let articolo of articoli">
+    <td>
+      {{ articolo.modello }}
+      <mat-divider></mat-divider>
+    </td>
+
+    <td>
+      {{ articolo.prezzo | currency : "€" }}
+      <mat-divider></mat-divider>
+    </td>
+  </tr>
+</table>
+<br />
+
+<form *ngIf="articoli.length > 0" [formGroup]="checkout" (ngSubmit)="inviaOrdine()">
+
+  <mat-form-field>
+    <mat-label>Nome</mat-label>
+    <input matInput placeholder="Nome" formControlName="nome" required>
+    <mat-error *ngIf="checkout.controls.nome.invalid">Campo obbligatorio</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Indirizzo</mat-label>
+    <input matInput placeholder="Indirizzo" formControlName="indirizzo" required>
+    <mat-error *ngIf="checkout.controls.indirizzo.invalid">Campo obbligatorio</mat-error>
+  </mat-form-field>
+  <br>
+
+  <button mat-raised-button>Conferma l'ordine</button>
+</form>
+
+<p *ngIf="articoli.length === 0">Il carrello è vuoto!</p>
+<br /><br />
+<p><a [routerLink]="['/spedizioni']">Tariffario spedizioni</a></p>

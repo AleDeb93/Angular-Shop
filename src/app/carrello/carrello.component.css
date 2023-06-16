@@ -1,0 +1,25 @@
+* {
+  padding: 0 16px;
+}
+p {
+  font-size: large;
+}
+table {
+  font-size: large;
+}
+a {
+  padding: 0;
+  text-decoration: none;
+  color: black;
+}
+p a:hover {
+  transition: background 1.5s ease;
+  background-color: #0582ca;
+  color: white;
+}
+form button {
+  background-color: #0582ca;
+  color: white;
+  padding: 0 16px;
+}
+

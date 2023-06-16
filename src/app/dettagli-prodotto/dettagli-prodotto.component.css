@@ -1,0 +1,26 @@
+h2{
+  text-align: center;
+}
+div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+mat-card{
+  font-size: x-large;
+  align-items: center;
+}
+mat-card img {
+  height: 500px;
+  max-width: 750px;
+}
+mat-card-content{
+  margin-top: 15px;
+  line-height: 30px;
+  height: auto;
+  width: 50vw;
+}
+.example-header-image {
+  background-image: url("https://www.freepnglogos.com/uploads/apple-logo-png/apple-logo-icon-16.png");
+  background-size: cover;
+}

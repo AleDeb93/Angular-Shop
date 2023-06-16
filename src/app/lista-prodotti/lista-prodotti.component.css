@@ -1,0 +1,29 @@
+* {
+  padding: 0 16px;
+}
+a{
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+.griglia {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+mat-card-title a {
+  padding: 0;
+  margin-top: 10px;
+}
+.example-card {
+  max-width: 400px;
+  margin-bottom: 35px;
+}
+.example-card img {
+  height: 200px;
+  max-width: 300px;
+}
+.example-header-image {
+  background-image: url("https://www.freepnglogos.com/uploads/apple-logo-png/apple-logo-icon-16.png");
+  background-size: cover;
+}
+

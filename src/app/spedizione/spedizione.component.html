@@ -1,0 +1,13 @@
+<h2>Tariffario spedizioni</h2>
+
+<mat-list *ngFor="let spedizione of speseSpedizione | async">
+  <!-- La asyncpipe sottoscrive un Observableo Promisee restituisce l'ultimo valore che ha emesso.
+  Quando viene emesso un nuovo valore, la asyncpipe contrassegna il componente da controllare per le modifiche -->
+  <mat-list-item>
+    {{ spedizione.tipologia }}
+  </mat-list-item>
+  <mat-list-item>
+    {{ spedizione.prezzo | currency : "€" }}
+  </mat-list-item>
+  <mat-divider></mat-divider>
+</mat-list>
